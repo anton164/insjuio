@@ -362,10 +362,10 @@ body {
 }
 
 #contactform{
+	position: relative;
 	width: 100%;
 	padding-top: 50px;
 	padding-left: 500px;
-	max-width: 1920px;
 	background-image: url('../images/contact.jpg');
 	background-size: 100%;
 }
@@ -382,7 +382,7 @@ body {
 #team{
 	position: relative;
 	width: 100%;
-	max-width: 1920px;
+	padding-top: 500px;	
 	background-image: url('../images/team.jpg');
 	background-size: 100%;
 	background-position: center;
@@ -405,9 +405,34 @@ body {
 			}
 			p {
 				font-weight: 300;
-				color: @gray-darker;
+				color: @gray	;
 				font-size: 16px;
 				margin-bottom: 50px;
+			}
+		}
+	}
+	@media (min-width: 768px) {
+		min-height: 100%;
+		.container {
+			position: absolute;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+			padding: 0 50px;
+			.container-inner {
+				max-width: 1000px;
+				margin-left: auto;
+				margin-right: auto;
+				h1 {
+					font-size: 50px;
+				}
+				p {
+					font-size: 18px;
+					max-width: 80%;
+					margin-left: auto;
+					margin-right: auto;
+				}
 			}
 		}
 	}
