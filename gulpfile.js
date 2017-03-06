@@ -11,6 +11,7 @@ var paths = {
 
 
 gulp.task('runKeystone', shell.task('node keystone.js'));
+gulp.task('deploy', shell.task('git push heroku'));
 gulp.task('watch', [
 
 ]);
