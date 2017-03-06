@@ -1,4 +1,4 @@
-/**
+/**2
  * This file is where you define your application routes and controllers.
  *
  * Start by including the middleware you want to run for every request;
