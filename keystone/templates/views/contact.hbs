@@ -1,7 +1,5 @@
-<div class="container">
-	<h1>Contact Us</h1>
-</div>
-<div class="container">
+<div class="container" id="contactform">
+	<h1>Kontakt oss!</h1>
 	<div class="row">
 		<div class="col-sm-8 col-md-6">
 			{{#if enquirySubmitted}}
@@ -10,15 +8,15 @@
 			<form method="post">
 				<input type="hidden" name="action" value="contact">
 				<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
-					<label>Name</label>
+					<label>Navn</label>
 					<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
 				</div>
 				<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
-					<label>Email</label>
+					<label>Epost</label>
 					<input type="email" name="email" class="form-control" value="{{formData.email}}">
 				</div>
 				<div class="form-group">
-					<label>Phone</label>
+					<label>Telefon</label>
 					<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
 				</div>
 				<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
@@ -42,3 +40,5 @@
 		</div>
 	</div>
 </div>
+
+
