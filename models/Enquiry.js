@@ -42,19 +42,19 @@ Enquiry.schema.methods.sendNotificationEmail = function (callback) {
 	var enquiry = this;
 	keystone.list('User').model.find().where('isAdmin', true).exec(function (err, admins) {
 		if (err) return callback(err);
-		new keystone.Email({
-			templateExt: 'hbs',
-			templateEngine: require('express-handlebars'),
-			templateName: 'enquiry-notification',
-		}).send({
-			to: admins,
-			from: {
-				name: 'Insj UiO',
-				email: 'contact@insj-uio.com',
-			},
-			subject: 'New Enquiry for Insj UiO',
-			enquiry: enquiry,
-		}, callback);
+		// new keystone.Email({
+		// 	templateExt: 'hbs',
+		// 	templateEngine: require('express-handlebars'),
+		// 	templateName: 'enquiry-notification',
+		// }).send({
+		// 	to: admins,
+		// 	from: {
+		// 		name: 'Insj UiO',
+		// 		email: 'contact@insj-uio.com',
+		// 	},
+		// 	subject: 'New Enquiry for Insj UiO',
+		// 	enquiry: enquiry,
+		// }, callback);
 	});
 };
 

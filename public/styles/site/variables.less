@@ -8,9 +8,24 @@
 
 // Gray and Brand Colors for use across theme
 
-@theme-primary:    #F05F40;
 
-@gray-base:        #000;
+@default-primary: #F05F40;
+
+
+@hans1-blue: #47D2E9;
+@hans1-gray: #F5F6FA;
+@hans1-salmon: #FE8A71;
+@hans1-green: #87D37B;
+@hans1-black: #535456;
+
+@hans2-charade: #1E1E24;
+
+
+
+@theme-primary:    @hans1-green;
+@theme-secondary: @hans1-salmon;
+
+@gray-base:        @hans2-charade;
 @gray-darker:      lighten(@gray-base, 13.5%); // #222
 @gray-dark:        lighten(@gray-base, 20%);   // #333
 @gray:             lighten(@gray-base, 33.5%); // #555
