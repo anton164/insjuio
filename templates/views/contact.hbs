@@ -15,24 +15,29 @@
 					<label>Epost</label>
 					<input type="email" name="email" class="form-control" value="{{formData.email}}">
 				</div>
-				<!-- Husk å endre PHONE i Js!! -->
+				<!--
 				<div class="form-group">
-					<label>Studieretning</label>
+					<label></label>
 					<input type="text" name="phone" placeholder="Studieretning på UiO" class="form-control" value="{{formData.phone}}">
+				</div>-->
+
+				<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
+					<label>What are you contacting us about?</label>
+					<select name="enquiryType" class="form-control">
+						<option value="">(select one)</option>
+						{{#each enquiryTypes}}
+						<option value="{{value}}">{{label}}</option>
+						{{/each}}
+					</select>
 				</div>
 
 				<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
-					<label>Beskrivelse av idé</label>
-					<textarea name="message" placeholder="Beskriv din idé!" rows="4" class="form-control">{{formData.message}}</textarea>
-				</div>
-				<! -- legge til var i JS!! -->
-				<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
-					<label>Veiledererfaring</label>
-					<textarea name="veileder" placeholder="Er det noen spesiell kompetanse du/dere ønsker at veileder har?" rows="4" class="form-control"></textarea>
+					<label>Melding</label>
+					<textarea name="message" placeholder="Hva lurer du på?:)" rows="4" class="form-control">{{formData.message}}</textarea>
 				</div>
 
 				<div class="form-actions">
-					<button type="submit" class="btn btn-primary">Send Inn</button>
+					<button type="submit" class="btn btn-primary">Send</button>
 				</div>
 			</form>
 			{{/if}}
