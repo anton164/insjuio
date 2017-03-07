@@ -22,6 +22,10 @@ hr.light {
 	border-color: white;
 }
 
+hr.dark{
+	border-color: @black;
+}
+
 a {
 	.transition-all;
 	color: @theme-primary;
@@ -48,11 +52,19 @@ p {
 
 .bg-primary {
 	background-color: @theme-primary;
+	color: @black;
+	h2{
+		font-weight: 700;
+	}
+	p{
+		color: @black;
+	}
+	
 }
 
 .bg-dark {
-	background-color: @gray-darker;
-	color: white;
+	background-color: @black;
+	color: @theme-primary;
 }
 
 .text-faded {
@@ -304,7 +316,7 @@ header {
 
 // Bootstrap Overrides
 .text-primary {
-	color: @hans1-blue;
+	color: @theme-primary;
 }
 
 .no-gutter > [class*='col-'] {
@@ -366,8 +378,16 @@ body {
 	width: 100%;
 	padding-top: 50px;
 	padding-left: 500px;
-	background-image: url('../images/contact.jpg');
-	background-size: 100%;
+}
+
+#idea{
+	background-color: @black;
+	h1{
+		color: @theme-primary;
+	}
+	form{
+		color: @theme-primary;
+	}
 }
 
 #arrows{
@@ -394,7 +414,7 @@ body {
 		.container-inner{
 			h1 {
 				font-weight: 700;
-				color: @gray-darker	;
+				color: @theme-primary;
 				text-transform: uppercase;
 				margin-top: 0;
 				margin-bottom: 0;
@@ -405,7 +425,7 @@ body {
 			}
 			p {
 				font-weight: 300;
-				color: @gray	;
+				color: @theme-primary;
 				font-size: 16px;
 				margin-bottom: 50px;
 			}
