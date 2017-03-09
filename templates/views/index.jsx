@@ -1,8 +1,108 @@
-var React = require('react');
+const React = require('react'),
+    IdeaContact = require('./ideaContact.jsx'),
+    TeamContact = require('./teamContact.jsx'),
+    Header = require('./header.jsx'),
+    Navigation = require('./navigation.jsx');
 
-var Index = React.createClass({
+const Index = React.createClass({
     render: function() {
-      return (<p>Hello Index</p>);
+        return (
+        <html>
+            <Header />
+            <body>
+                <Navigation links={this.props.navLinks} />
+                <header>
+                    <div class="header-content">
+                        <div class="header-content-inner">
+                            <h1 id="homeHeading">Har du en idé?</h1>
+                            <p>Har du en idé og lurer på hva du skal gøre med den?</p>
+                            <hr/>    
+                            <a data-toggle="collapse" href="#ideacontact" class="btn btn-primary btn-xl page-scroll">Meld den inn her!</a>
+                        </div>
+                    </div>
+                </header>
+
+                <IdeaContact />
+
+                <section class="bg-primary" id="about">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 text-center">
+                                <h2 class="section-heading">INSJ UiO</h2>
+                                <hr class="dark"/>
+                                <p class="text-faded">INSJ UiO er et kontaktpunkt og veiledningstjeneste for studenter som ønsker å videreutvikle idéen sin eller få en fot inn i startupmiljøet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="services">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h2 class="section-heading">Prosessen</h2>
+                                <hr class="primary" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" id="process">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-4 text-center">
+                                <div class="service-box">
+                                    <i class="fa fa-4x fa-lightbulb-o text-primary sr-icons"></i>
+                                    <h3>Din idé</h3>
+                                    <p class="text-muted">Du har en idé som du har lyst til å realisere</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col col-md-6" id="arrows">
+                                <i class="fa fa-2x fa-arrow-right text-primary sr-icons"></i>   
+                            </div>
+                            <div class="col-lg-2 col-md-4 text-center">
+                                <div class="service-box">
+                                    <i class="fa fa-4x fa-envelope text-primary sr-icons"></i>
+                                    <h3>Kontakt oss</h3>
+                                    <p class="text-muted">Du kontakter oss for hjelp</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col col-md-6" id="arrows">
+                                <i class="fa fa-2x fa-arrow-right text-primary sr-icons"></i>   
+                            </div>
+                            <div class="col-lg-2 col-md-4 text-center">
+                                <div class="service-box">
+                                    <i class="fa fa-4x fa-users text-primary sr-icons"></i>
+                                    <h3>Match</h3>
+                                    <p class="text-muted">Vi matcher deg med passende veileder</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col col-md-6" id="arrows">
+                                <i class="fa fa-2x fa-arrow-right text-primary sr-icons"></i>   
+                            </div>
+                            <div class="col-lg-2 col-md-4 text-center">
+                                <div class="service-box">
+                                    <i class="fa fa-4x fa-trophy text-primary sr-icons"></i>
+                                    <h3>Realiser</h3>
+                                    <p class="text-muted">Realiser din idé!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="team">
+                    <div class="container">
+                        <div class="container-inner">
+                            <h1 id="homeHeading">Lyst til å bli med på team?</h1>        
+                            <p>Har du lyst til å bli en del av en startup?</p>
+                            <hr />
+                            <a data-toggle="collapse" href="#teamcontact" class="btn btn-primary btn-xl page-scroll">Gi beskjed her!</a>
+                        </div>
+                    </div>
+                </section>
+
+                <TeamContact />
+            </body>
+        </html>
+        );
     }
 
 });
