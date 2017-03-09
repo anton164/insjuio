@@ -9,8 +9,6 @@ var linkTemplate = _.template('<a href="<%= url %>"><%= text %></a>');
 var scriptTemplate = _.template('<script src="<%= src %>"></script>');
 var cssLinkTemplate = _.template('<link href="<%= href %>" rel="stylesheet">');
 
-hbs.registerPartial('crossPartial', '{{back}}');
-
 module.exports = function () {
 
 	var _helpers = {};
