@@ -82,7 +82,7 @@ const Index = React.createClass({
                             </div>
                             <div className="col-lg-2 col-md-4 text-center">
                                 <div className="service-box">
-                                    <i class="fa fa-4x fa-trophy text-primary sr-icons"></i>
+                                    <i className="fa fa-4x fa-trophy text-primary sr-icons"></i>
                                     <h3>Realiser</h3>
                                     <p className="text-muted">Realiser din idé!</p>
                                 </div>
