@@ -2,13 +2,13 @@ const React = require('react');
 
 function NavItem (props) {
     return (
-        <li className="{props.isActive ? 'active' : ''}">
+        <li className="{props.isActive ? 'active' : ''}" key={props.label}>
             <a href="{props.href}">{props.label}</a>
         </li>
     );
 }
 
-const Navigation = React.createClass({
+const Navigation = React.createClass({    
     render: function (links) {
         const navItems = this.props.links.map((item) => {
             return NavItem({
