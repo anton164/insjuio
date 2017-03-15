@@ -4,45 +4,45 @@ const IdeaContact = React.createClass({
     render: function () {
         let ideaFormData = {};
         return (
-            <section id="ideacontact" class="bg-dark collapse">
-                <div class="container" id="cross">
-                    <i class="fa fa-1x fa-times text-primary sr-icons" data-toggle="collapse" href="#idea"></i>
+            <section id="ideacontact" className="bg-dark collapse">
+                <div className="container" id="cross">
+                    <i className="fa fa-1x fa-times text-primary sr-icons" data-toggle="collapse" href="#idea"></i>
                 </div>
 
-                <div class="container" id="contactform">
+                <div className="container" id="contactform">
                     <h1>Har du en idé?</h1>
-                    <div class="row">
-                        <div class="col-sm-8 col-md-6">
+                    <div className="row">
+                        <div className="col-sm-8 col-md-6">
                             if ideaEnquirySubmitted
                             <h3>Thanks for getting in touch.</h3>
                             else
                             <form method="post">
                                 <input type="hidden" name="action" value="ideacontact" />
-                                <div class="form-group {{#if ideaValidationErrors.name}}has-error{{/if}}">
+                                <div className="form-group {{#if ideaValidationErrors.name}}has-error{{/if}}">
                                     <label>Navn</label>
-                                    <input type="text" name="name.full"  class="form-control" value="{{ideaFormData.[name.full]}}" />
+                                    <input type="text" name="name.full"  className="form-control" value="{{ideaFormData.[name.full]}}" />
                                 </div>
-                                <div class="form-group {{#if ideaValidationErrors.email}}has-error{{/if}}">
+                                <div className="form-group {{#if ideaValidationErrors.email}}has-error{{/if}}">
                                     <label>Epost</label>
-                                    <input type="email" name="email" class="form-control" value="{{ideaFormData.email}}" />
+                                    <input type="email" name="email" className="form-control" value="{{ideaFormData.email}}" />
                                 </div>
-                                <div class="form-group {{#if ideaValidationErrors.student}}has-error{{/if}}">
+                                <div className="form-group {{#if ideaValidationErrors.student}}has-error{{/if}}">
                                     <label>Studieretning på UiO</label>
-                                    <input type="text" name="student" placeholder="(optional)" class="form-control" value="{{ideaFormData.student}}" />
+                                    <input type="text" name="student" placeholder="(optional)" className="form-control" value="{{ideaFormData.student}}" />
                                 </div>
-                                <div class="form-group {{#if ideaValidationErrors.idea}}has-error{{/if}} ">
+                                <div className="form-group {{#if ideaValidationErrors.idea}}has-error{{/if}} ">
                                     <label>Forklar din idé!</label>
-                                    <textarea name="idea" placeholder="Fortell oss om din idé!" rows="4" class="form-control">{ideaFormData.idea}</textarea>
+                                    <textarea name="idea" placeholder="Fortell oss om din idé!" rows="4" className="form-control">{ideaFormData.idea}</textarea>
                                 </div>
-                                <div class="form-group {{#if ideaValidationErrors.experience}}has-error{{/if}}">
+                                <div className="form-group {{#if ideaValidationErrors.experience}}has-error{{/if}}">
                                     <label>Erfaring på veileder</label>
-                                    <textarea name="experience" placeholder="Kompetanse/erfaring du ønsker på veileder" rows="4" class="form-control">{ideaFormData.experience}</textarea>
+                                    <textarea name="experience" placeholder="Kompetanse/erfaring du ønsker på veileder" rows="4" className="form-control">{ideaFormData.experience}</textarea>
                                 </div>
-                                <div class="form-actions">
-                                    <button type="submit" class="btn btn-primary">Send</button>
+                                <div className="form-actions">
+                                    <button type="submit" className="btn btn-primary">Send</button>
                                 </div>
                             </form>
-                            /if
+                            
                         </div>
                     </div>
                 </div>
