@@ -21,16 +21,16 @@ keystone.init({
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'jsx',
-	'custom engine': require('express-react-views').createEngine(),
+	//'custom engine': require('express-react-views').createEngine(),
 	port: process.env['PORT'] || 1227,
 
-	/*'custom engine': handlebars.create({
+	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',
 		partialsDir: 'templates/views/partials',
 		defaultLayout: 'default',
 		helpers: new require('./templates/views/helpers')(),
 		extname: '.hbs',
-	}).engine,*/
+	}).engine,
 
 	'emails': 'templates/emails',
 

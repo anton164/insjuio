@@ -5,7 +5,13 @@ const React = require('react'),
     Navigation = require('./navigation.jsx'),
     Footer = require('./footer.jsx');
 
+
+
 const Index = React.createClass({
+    log: function (e) {
+        console.log('her skjer det noe');
+        //e.preventDefault();
+    },
     render: function() {
         return (
         <html>
@@ -16,15 +22,15 @@ const Index = React.createClass({
                     <div className="header-content">
                         <div className="header-content-inner">
                             <h1 id="homeHeading">Har du en idé?</h1>
-                            <p>Har du en idé og lurer på hva du skal gøre med den?</p>
+                            <p onClick={this.log()}>Har du en idé og lurer på hva du skal gjøre med den?</p>
                             <hr/>    
-                            <<a data-toggle="collapse" href="#ideacontact" className="btn btn-primary btn-xl page-scroll">Meld den inn her!</a>
+                            <a data-toggle="collapse" className="btn btn-primary btn-xl page-scroll">Meld den inn her!</a>
                         </div>
                     </div>
                 </header>
                 <section id="ideacontact" className="bg-dark row collapse">
                     <IdeaContact />
-                </section
+                </section>
 
                 <section className="bg-primary" id="about">
                     <div className="container">
