@@ -5,6 +5,10 @@ const React = require('react'),
     Navigation = require('./navigation.jsx'),
     Footer = require('./footer.jsx');
 
+const log = () => {
+    console.log('hei');
+};
+
 const Index = React.createClass({
     render: function() {
         return (
@@ -18,13 +22,14 @@ const Index = React.createClass({
                             <h1 id="homeHeading">Har du en idé?</h1>
                             <p>Har du en idé og lurer på hva du skal gøre med den?</p>
                             <hr/>    
-                            <<a data-toggle="collapse" href="#ideacontact" className="btn btn-primary btn-xl page-scroll">Meld den inn her!</a>
+                            <a data-toggle="collapse" onClick={log} className="btn btn-primary btn-xl">Meld den inn her!</a>
                         </div>
                     </div>
                 </header>
+                
                 <section id="ideacontact" className="bg-dark row collapse">
                     <IdeaContact />
-                </section
+                </section>
 
                 <section className="bg-primary" id="about">
                     <div className="container">
