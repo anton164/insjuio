@@ -1,8 +1,7 @@
-const React = require('react'),
-      React-form = require('react-form');
+import React from 'react'
+import { Form, Text, Select, Textarea, Checkbox, Radio, NestedForm, FormError } from 'react-form'
 
-
-const IdeaContact = (
+const IdeaContact =  (
     <Form
         validate={values => {
             const{name, email, student, idea, experience} = values
@@ -11,7 +10,7 @@ const IdeaContact = (
                 email : !email ? 'Epost er påkrevt': false,
                 student: !student ? 'Studieretning påkrevd': false,
                 idea: !idea ? 'Du må forklare din idé!' : false,
-                experience: !experience ? 'Ønsket erfaring er påkrevd!': false;
+                experience: !experience ? 'Ønsket erfaring er påkrevd!': false
 
             }
         }}
