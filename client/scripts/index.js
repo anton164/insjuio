@@ -3,8 +3,7 @@ const React = require('react'),
 	Navigation = require('./navigation.js'),
 	IdeaContact = require('./ideaContact.js'),
 	TeamContact = require('./teamContact.js'),
-	Footer = require('./footer.js'),
-	MyForm = require('./myForm.js');
+	Footer = require('./footer.js');
 
 const Index = React.createClass({
     log: function (e) {
@@ -26,7 +25,10 @@ const Index = React.createClass({
 					</div>
 				</header>
 				<section id="ideacontact" className="bg-dark row collapse">
-					
+					<div className="container" id="cross">
+   						<i className="fa fa-1x fa-times text-primary sr-icons" data-toggle="collapse" href="#idea"></i>
+					</div>
+					<IdeaContact/>
 				</section>
 
 				<section className="bg-primary" id="about">

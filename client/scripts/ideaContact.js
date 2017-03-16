@@ -1,7 +1,8 @@
 import React from 'react'
 import { Form, Text, Select, Textarea, Checkbox, Radio, NestedForm, FormError } from 'react-form'
 
-const IdeaContact =  (
+const IdeaContact = function(){
+    return(
     <Form
         validate={values => {
             const{name, email, student, idea, experience} = values
@@ -22,35 +23,42 @@ const IdeaContact =  (
     {({ values, submitForm, addValue, removeValue, getError }) => {
 
         return(
-            <form onSubmit={submitForm}>
-                <div className="form-group">
-                    <label>Navn</label>
-                    <Text field='name' placeholder='Navn'/>
+            <div className="container" id="contactform">
+                <h1>Har du en idé?</h1>
+                <div className="row">
+                    <div className="col-sm-8 col-md6">
+                        <form onSubmit={submitForm}>
+                            <div className="form-group">
+                                <label>Navn</label>
+                                <Text field='name' placeholder='Navn'/>
+                            </div>
+                            <div className="form-group">
+                                <label>Epost</label>
+                                <Text field="email" placeholder="Epost"/>
+                            </div>
+                            <div className="form-group">
+                                <label>Studieretning på UiO</label>
+                                <Text field="student" placeholder="Studieretning"/>
+                            </div>
+                            <div className="form-group">
+                                <label>Forklar din idé!</label>
+                                <Textarea field="idea" placeholder="Fortell oss om din idé!"/>
+                            </div>
+                            <div className="form-group">
+                                <label>Erfaring på veileder</label>
+                                <Textarea field="experience" placeholder="Kompetanse/erfaring du ønsker på veileder"/>
+                            </div>
+                            <div className="form-actions">
+                                <button type="submit" className="btn btn-primary">Send</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div className="form-group">
-                    <label>Epost</label>
-                    <Text field="email" placeholder="Epost"/>
-                </div>
-                <div className="form-group">
-                    <label>Studieretning på UiO</label>
-                    <Text field="student" placeholder="Studieretning"/>
-                </div>
-                <div className="form-group">
-                    <label>Forklar din idé!</label>
-                    <Textarea field="idea" placeholder="Fortell oss om din idé!"/>
-                </div>
-                <div className="form-group">
-                    <label>Erfaring på veileder</label>
-                    <Textarea field="experience" placeholder="Kompetanse/erfaring du ønsker på veileder"/>
-                </div>
-                <div className="form-actions">
-                    <button className="btn btn-primary">Send</button>
-                </div>
-            </form>
+            </div>
         )
     }}
-    </Form>
-);
+    </Form>)
+};
 
 module.exports = IdeaContact;
 
