@@ -37,8 +37,10 @@ var routes = {
 exports = module.exports = function (app) {
 
 	app.use('/client', browserify('./client/scripts', {
+		extensions: ['.js', '.jsx'],
 		transform: [babelify.configure({
-			plugins: ['object-assign']
+			plugins: ['object-assign'],
+			extensions: ['.js', '.jsx']
 		})]
 	}));
 	// Views

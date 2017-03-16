@@ -2,6 +2,7 @@ const React = require('react'),
 	ReactDOM = require('react-dom');
 
 function NavItem (props) {
+    console.log(props);
     return (
         <li className="{props.isActive ? 'active' : ''}" key={props.label}>
             <a href="{props.href}">{props.label}</a>
