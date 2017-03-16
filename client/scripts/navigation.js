@@ -13,7 +13,6 @@ const Navigation = React.createClass({
     render: function () {
         const links = [{ label: 'Hjem', key: 'home', href: '/' },
 		{ label: 'Blog', key: 'blog', href: '/blog' },
-		{ label: 'Kontakt', key: 'Kontakt', href: '/contact' },
 		{ label: 'Om INSJ', key: 'Om INSJ', href: '/about' }
         ];
         const navItems = links.map((item) => {
