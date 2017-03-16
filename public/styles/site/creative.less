@@ -147,23 +147,21 @@ aside {
 				color: white;
 			}
 		}
-		&.affix {
-			background-color: white;
-			border-color: fade(@gray-darker, 5%);
-			.navbar-header .navbar-brand {
-				color: @theme-primary;
-				font-size: 14px;
-				&:hover,
-				&:focus {
-					color: darken(@theme-primary, 10%);
-				}
+		background-color: @theme-primary;
+		border-color: fade(@gray-darker, 5%);
+		.navbar-header .navbar-brand {
+			color: white;
+			font-size: 14px;
+			&:hover,
+			&:focus {
+				color: darken(white, 10%);
 			}
-			.nav > li > a,
-			.nav > li > a:focus {
-				color: @gray-darker;
-				&:hover {
-					color: @theme-primary;
-				}
+		}
+		.nav > li > a,
+		.nav > li > a:focus {
+			color: @gray-darker;
+			&:hover {
+				color: white;
 			}
 		}
 	}

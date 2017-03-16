@@ -21,6 +21,8 @@
 var keystone = require('keystone');
 var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
+var babelify = require('babelify');
+var browserify = require('browserify-middleware');
 
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
@@ -33,6 +35,12 @@ var routes = {
 
 // Setup Route Bindings
 exports = module.exports = function (app) {
+
+	app.use('/client', browserify('./client/scripts', {
+		transform: [babelify.configure({
+			plugins: ['object-assign']
+		})]
+	}));
 	// Views
 	app.all('/', routes.views.index);
 	app.get('/blog/:category?', routes.views.blog);

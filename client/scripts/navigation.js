@@ -1,4 +1,5 @@
-const React = require('react');
+const React = require('react'),
+	ReactDOM = require('react-dom');
 
 function NavItem (props) {
     return (
@@ -9,8 +10,12 @@ function NavItem (props) {
 }
 
 const Navigation = React.createClass({    
-    render: function (links) {
-        const navItems = this.props.links.map((item) => {
+    render: function () {
+        const links = [{ label: 'Hjem', key: 'home', href: '/' },
+		{ label: 'Blog', key: 'blog', href: '/blog' },
+		{ label: 'Om INSJ', key: 'Om INSJ', href: '/about' }
+        ];
+        const navItems = links.map((item) => {
             return NavItem({
                 isActive: false,
                 label: item.label,

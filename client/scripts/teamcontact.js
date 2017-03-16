@@ -24,7 +24,7 @@ const TeamContact = React.createClass({
                                 </div>
                                 <div className="form-group {{#if teamValidationErrors.email}}has-error{{/if}}">
                                     <label>Epost*</label>
-                                    <input type="email" name="email" className="form-control" value="{teamFormData.email}" />
+                                    <input type="email" name="email" className="form-control" value="blabla@bad.com" />
                                 </div>
                                 <div className="form-group {{#if teamValidationErrors.student}}has-error{{/if}}">
                                     <label>Studieretning på UiO*</label>
