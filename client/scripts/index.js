@@ -105,8 +105,14 @@ const Index = React.createClass({
 						</div>
 					</div>
 				</section>
+				
+				<section id="teamcontact" className="bg-dark row collapse">
+					<div className="container" id="cross">
+   						<i className="fa fa-1x fa-times text-primary sr-icons" data-toggle="collapse" href="#idea"></i>
+					</div>
+					<TeamContact/>
+				</section>
 
-				<TeamContact />
 				<Footer />
 			</div>
         );
