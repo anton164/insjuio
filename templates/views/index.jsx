@@ -19,8 +19,6 @@ function Index (props) {
                 {/*<!-- Plugin CSS -->*/}
                 <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" />
 
-
-
                 {/*{{!-- This file provides the default styling for the KeystoneJS Content Editor
                     - only renders when user is logged in and admin--}}
                 {{{isAdminEditorCSS user}}}*/}

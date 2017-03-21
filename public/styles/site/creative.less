@@ -12,6 +12,7 @@ body {
 	.serif-font;
 }
 
+
 hr {
 	border-color: @theme-primary;
 	border-width: 3px;
@@ -50,8 +51,15 @@ p {
 	margin-bottom: 20px;
 }
 
+.logo {
+	position: absolute;
+	left: 40px;
+	top: 30px;
+	width: 80px;
+}
+
 .bg-primary {
-	background-color: @theme-primary;
+	background-color: @white;
 	color: @black;
 	h2{
 		font-weight: 700;
@@ -59,7 +67,6 @@ p {
 	p{
 		color: @black;
 	}
-	
 }
 
 .bg-dark {
@@ -113,7 +120,7 @@ aside {
 				text-transform: uppercase;
 				font-weight: 700;
 				font-size: 13px;
-				color: @gray-darker;
+				color: white;
 				&:hover {
 					color: @theme-primary;
 				}
@@ -175,10 +182,11 @@ header {
 	min-height: auto;
 	.background-cover;
 	background-position: center;
-	background-image: url('../images/Lightbulb1.jpg');
+	background: @theme-primary;
 	text-align: center;
 	color: white;
-	padding-top: 500px;
+	height: 500px;
+	padding-top: 6em;
 	.header-content {
 		position: relative;
 		text-align: center;
@@ -328,7 +336,7 @@ header {
 }
 
 .btn-primary {
-	.button-variant(white;@theme-primary;@theme-primary);
+	.button-variant(white;@darkGreen;@darkGreen);
 }
 
 .btn {
@@ -400,7 +408,7 @@ body {
 #team{
 	position: relative;
 	width: 100%;
-	padding-top: 500px;	
+	padding-top: 6em;	
 	background-image: url('../images/team.jpg');
 	background-size: 100%;
 	background-position: center;

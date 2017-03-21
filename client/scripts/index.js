@@ -13,14 +13,14 @@ const Index = React.createClass({
     render: function() {
         return (
 			<div>
-				<Navigation links={this.props.navLinks} />
 				<header>
+					<img className="logo" src="images/insj.png" />
 					<div className="header-content">
 						<div className="header-content-inner">
 							<h1 id="homeHeading">Har du en idé?</h1>
 							<p>Har du en idé og lurer på hva du skal gjøre med den?</p>
 							<hr/>    
-							<a data-toggle="collapse" onClick={this.log} href="#ideacontact" className="btn btn-primary btn-xl page-scroll">Meld den inn her!</a>
+							<a data-toggle="collapse" onClick={this.log} href="#ideacontact" className="btn btn-primary btn-xl page-scroll">Snakk med oss</a>
 						</div>
 					</div>
 				</header>
@@ -39,6 +39,31 @@ const Index = React.createClass({
 								<hr className="dark"/>
 								<p className="text-faded">INSJ UiO er et kontaktpunkt og veiledningstjeneste for studenter som ønsker å videreutvikle idéen sin eller få en fot inn i startupmiljøet.</p>
 							</div>
+						</div>
+						<div className="row">
+							<div className="col-md-3 text-center">
+								<img className="img-thumbnail" src="images/folk/AntonAbilov.jpg" />
+								<hr className="dark"/>
+								<h3 className="section-heading">Anton Abilov</h3>
+							</div>
+							<div className="col-md-3 text-center">
+								<img src="" />
+								<hr className="dark"/>
+								<h3 className="section-heading">Sebastian Berge</h3>
+							</div>
+							<div className="col-md-3 text-center">
+								<img className="img-thumbnail" src="images/folk/Stine.png" />
+								<hr className="dark"/>
+								<h3 className="section-heading">Stine Holst</h3>
+							</div>
+							<div className="col-md-3 text-center">
+								<img className="img-thumbnail" src="images/folk/Aleksander.jpg" />
+								<hr className="dark"/>
+								<h3 className="section-heading">Aleksander Røe Strømshoved</h3>
+							</div>
+						</div>
+						<div className="row">
+							Sponsorer, Spark, UiO, osv.
 						</div>
 					</div>
 				</section>
@@ -94,27 +119,8 @@ const Index = React.createClass({
 						</div>
 					</div>
 				</section>
-
-				<section id="team">
-					<div className="container">
-						<div className="container-inner">
-							<h1 id="homeHeading">Lyst til å bli med på team?</h1>        
-							<p>Har du lyst til å bli en del av en startup?</p>
-							<hr />
-							<a data-toggle="collapse" href="#teamcontact" className="btn btn-primary btn-xl page-scroll">Gi beskjed her!</a>
-						</div>
-					</div>
-				</section>
-				
-				<section id="teamcontact" className="bg-dark row collapse">
-					<div className="container" id="cross">
-   						<i className="fa fa-1x fa-times text-primary sr-icons" data-toggle="collapse" href="#idea"></i>
-					</div>
-					<TeamContact/>
-				</section>
-
 				<Footer />
-			</div>
+			</div>	
         );
     }
 
