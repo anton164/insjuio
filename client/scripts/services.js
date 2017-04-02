@@ -19,11 +19,11 @@ const Services = React.createClass({
                 Har du lyst til å kommersialisere et forskningsprosjekt?
               </p>
               <div className="weird-slogans">
+                <span className="catstagram">
+                  Eller lage <span className="instagram">instagram</span> for katter 🐱?
+                </span>
                 <span className="tinderdog">
                   Hva med <span className="tinder">Tinder🔥</span> for hundepass 🐶?
-                </span>
-                <span className="catstagram">
-                  Eller lage instagram for katter?
                 </span>
               </div>
             </div>
@@ -40,13 +40,11 @@ const Services = React.createClass({
                 som hjelper deg med å teste og videreutvikle idéen din. Helt gratis.
               </p>
               <p>
-                Om du er nysgjerrig bla bla bla Bli med i team
-              </p>
-              <p>
-                Tjenesten er koordinert av studenter i samarbeid med Universitetet i Oslo.
+                Om du rett og slett er nysgjerrig på hva som skjer i startupmiljøet på UiO,
+                eller har lyst til å bli med i et team så setter vi deg gjerne i kontakt!
               </p>
             </div>
-            <div className="col-sm-4">
+            <div className="col-sm-4 text-center">
               <img src="images/idea-woman.png" className="idea-woman" />
             </div>
           </div>
