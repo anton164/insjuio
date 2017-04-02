@@ -15,11 +15,11 @@ const Index = React.createClass({
 				{/* Header */}
 				<Header />
 
-				{/* About us */}
-				<About />
-
 				{/* Services */}
 				<Services />
+
+				{/* About us */}
+				<About />
 			</div>
         );
     }

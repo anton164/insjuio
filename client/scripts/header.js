@@ -11,7 +11,7 @@ const Header = React.createClass({
                 <p>
                   Pønsker du på en idé og lurer på hvordan du skal gå frem?
                   <br />
-                  Vil du være med på å skape morgendagens tjenester?
+                  Vil du bli med i et team?
                 </p>
                 <h1 id="homeHeading">Ta litt insj a</h1>
                 <br /><br /><br />
