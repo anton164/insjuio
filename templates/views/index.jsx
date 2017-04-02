@@ -46,6 +46,7 @@ function Index (props) {
                 <script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
                 <script src="/js/theme/creative.js"></script>
                 <script src="https://use.fontawesome.com/24d0414047.js"></script>
+                <script src="/js/segment/segment.js"></script>
                 {/*{{{isAdminEditorJS user}}}*/}
             </body>
         </html>
