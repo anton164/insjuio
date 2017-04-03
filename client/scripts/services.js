@@ -10,10 +10,17 @@ const Services = React.createClass({
               <img className="wat-mann" src="images/wat-mann.png" />
             </div>
             <div className="col-sm-8">
-              <h2 className="section-heading">Hvordan fungerer det?</h2>
+              <h2 className="section-heading">Er det ikke på tide at du bidrar?</h2>
               <br />
               <p>
-                Insj UiO er et kontaktpunkt for deg som ønsker å realisere idéen din eller få en fot inn i startupmiljøet.
+                Har du noensinne tenkt at det finnes viktige problemer de
+                </p>
+              <p>
+                Det spiller ingen rolle om du har en god idé, en dårlig idé eller en briljant idé<br />
+                - <strong>det er viktig å ha noen å sparre med</strong>.
+              </p>
+              <p>
+                Vi setter deg i kontakt med en mentor som hjelper deg med å teste og videreutvikle idéen din. Helt gratis.
               </p>
               <p>
                 Har du lyst til å kommersialisere et forskningsprosjekt?
@@ -33,15 +40,17 @@ const Services = React.createClass({
               <h2 className="section-heading">Vi er her for å hjelpe deg</h2>
               <br />
               <p>
-                Det spiller ingen rolle om du har en god idé, en dårlig idé eller en briljant idé - det er viktig å ha noen å sparre med.
+                Insj UiO er et kontaktpunkt for deg som ønsker å realisere idéen din eller få en fot inn i startupmiljøet.
               </p>
               <p>
-                Gjennom oss kan du bli satt i kontakt med en mentor
-                som hjelper deg med å teste og videreutvikle idéen din. Helt gratis.
+                Kanskje du bare er nysgjerrig på hva som skjer i startupmiljøet på UiO?<br />
+                Eller har lyst til å bli med i et team?<br />
               </p>
-              <p>
-                Om du rett og slett er nysgjerrig på hva som skjer i startupmiljøet på UiO,
-                eller har lyst til å bli med i et team så setter vi deg gjerne i kontakt!
+              <br />
+              <p className="text-center">
+                <a data-toggle="collapse" onClick={this.log} href="#ideacontact" className="btn btn-success btn-xl page-scroll">
+                  Snakk med oss
+                </a>
               </p>
             </div>
             <div className="col-sm-4 text-center">
